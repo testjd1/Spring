@@ -1,0 +1,11 @@
+package ex3_autowiring;
+
+public class MessageBeanImpl implements MessageBean{
+	
+	private String name;
+	private String message;
+	@Override
+	public void sayHello() {
+
+	}
+}

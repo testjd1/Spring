@@ -1,0 +1,32 @@
+package ex2_annotation;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MemberDAO {
+	private MemberBean member;
+/*	
+	// 1. constructor
+	public MemberDAO() {}
+	
+	
+	public MemberDAO(MemberBean member) {
+		super();
+		this.member = member;
+	}
+
+
+	// setter
+	public void setMember(MemberBean member) {
+		this.member = member;
+	}
+*/	
+
+	public void insert() {
+		member.output();
+		System.out.println("저장하여씃ㅂ니다.");
+	}
+	
+	
+	
+}

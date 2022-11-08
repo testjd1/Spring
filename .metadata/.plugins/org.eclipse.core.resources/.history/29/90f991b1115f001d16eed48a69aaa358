@@ -1,0 +1,26 @@
+package ex2_annotation;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import ex1_xml1.MessageBean;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		// [1] 스프링 설정 파일 연결
+			ApplicationContext context = new ClassPathXmlApplicationContext("ex2_xml3_list/applicationContext.xml");
+		// [2] 빈 가져오기
+			
+			ListBean bean = (ListBean)context.getBean("bean");
+			/*
+			for(Integer i : bean.getIntList()) {
+				System.out.println(i);
+			}
+			*/
+			for(MemberBean mb : bean.getMemberList()) {
+				mb.output();
+			}
+	}
+
+}
